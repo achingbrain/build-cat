@@ -1,0 +1,28 @@
+{
+  "name": "build-cat",
+  "version": "1.0.0",
+  "description": "Physical build avatar",
+  "main": "ptolemy.js",
+  "scripts": {
+    "test": "istanbul cover nodeunit test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/achingbrain/build-cat.git"
+  },
+  "dependencies": {
+    "serialport": "~1.2.3",
+    "winston": "~0.7",
+    "request": "~2.27",
+    "pololu-maestro-ioboard": "~0.0.0",
+    "pololu-maestro": "~2.1",
+    "ioboard": "~1.0",
+    "johnny-five": "~0.7"
+  },
+  "devDependencies": {
+    "nodeunit": "~0.8",
+    "jsmockito": "~1.0",
+    "jshamcrest": "~0.7",
+    "istanbul": "~0.1"
+  }
+}
