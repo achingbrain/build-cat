@@ -1,6 +1,6 @@
 # Ptolemy
 
-A [johnny-five](https://github.com/rwaldron/johnny-five) based build notification system.
+A [johnny-five](https://github.com/rwaldron/johnny-five) based build notification system.  It's built from a toy cat picked up from Toys R Us, has a head mounted on a servo and has had something horrible done to it's eyes with a dremel.
 
 ![Ptolemy, relaxing with Sir Patric Moore](https://raw.github.com/achingbrain/build-cat/master/assets/ptolemy.jpg)
 
@@ -15,3 +15,18 @@ See [https://vimeo.com/77849849](https://vimeo.com/77849849)
 Ptolemy uses a [Pololu Mini Maestro](http://www.pololu.com/catalog/product/1352) built into a Meccano skeleton (mostly because I destroyed the original plastic skeleton through exploratory construction).  It has a servo motor to drive it's head and two RGB LEDs for eyes, with the green channels spliced and connected to the sole PWM output available on the board.
 
 The software runs on [Node.js](http://nodejs.org/), interfaces with [johnny-five](https://github.com/rwaldron/johnny-five) via [ioboard](https://github.com/achingbrain/node-ioboard), [pololu-maestro-ioboard](https://github.com/achingbrain/node-maestro-ioboard) and finally [pololu-maestro](https://github.com/omcaree/node-pololumaestro).
+
+The Meccano skeleton (it's legs have since been lengthened), show my shoddy glue gun work.  You can see the Maestro board next to it.
+
+![Meccano skeleton](https://raw.github.com/achingbrain/build-cat/master/assets/skeleton.jpg)
+
+Somewhat freaky image with the head attached to the servo
+
+![Skeleton with face attached](https://raw.github.com/achingbrain/build-cat/master/assets/skeletonwithskin.jpg)
+
+## What's next?
+
+ * Sounds
+ * More movement
+ * Maybe a rebuild with [this one](http://www.toysrus.co.uk/Toys-R-Us/Toys/Soft-Toys/Fur-Real-Daisy-Plays-with-Me-Kitty(0106748)?searchPosition=13)
+ * IRL Ptolemy was black. Maybe some spray paint?
