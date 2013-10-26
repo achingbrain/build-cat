@@ -32,5 +32,5 @@ Somewhat freaky image with the head attached to the servo:
 
  * Sounds
  * More movement
- * Maybe a rebuild with [this one](http://www.toysrus.co.uk/Toys-R-Us/Toys/Soft-Toys/Fur-Real-Daisy-Plays-with-Me-Kitty(0106748)?searchPosition=13)
+ * Maybe a rebuild with [this one](http://www.toysrus.co.uk/Toys-R-Us/Toys/Soft-Toys/Fur-Real-Daisy-Plays-with-Me-Kitty\(0106748\))
  * IRL Ptolemy was black. Maybe some spray paint?
