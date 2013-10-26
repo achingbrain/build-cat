@@ -2,9 +2,11 @@
 
 A [johnny-five](https://github.com/rwaldron/johnny-five) based build notification system.  It's built from a toy cat picked up from Toys R Us, has a head mounted on a servo and has had something horrible done to it's eyes with a dremel.
 
-![Ptolemy, relaxing with Sir Patric Moore](https://raw.github.com/achingbrain/build-cat/master/assets/ptolemy.jpg)
+It watches a Jenkins URL for failing builds and then strikes fear into the heart of developers until they fix the build and restore Ptolemy to a happy state.
 
-Ptolemy (named for much mourned national treasure [Sir Patric Moore](http://en.wikipedia.org/wiki/Patrick_Moore)'s cat) watches a Jenkins URL for failing builds and then strikes fear into the heart of developers until they fix the build and restore Ptolemy to a happy state.
+The name comes from much mourned national treasure [Sir Patric Moore](http://en.wikipedia.org/wiki/Patrick_Moore)'s cat.
+
+![Ptolemy, relaxing with Sir Patric Moore](https://raw.github.com/achingbrain/build-cat/master/assets/ptolemy.jpg)
 
 ## Demo
 
