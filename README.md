@@ -16,11 +16,13 @@ Ptolemy uses a [Pololu Mini Maestro](http://www.pololu.com/catalog/product/1352)
 
 The software runs on [Node.js](http://nodejs.org/), interfaces with [johnny-five](https://github.com/rwaldron/johnny-five) via [ioboard](https://github.com/achingbrain/node-ioboard), [pololu-maestro-ioboard](https://github.com/achingbrain/node-maestro-ioboard) and finally [pololu-maestro](https://github.com/omcaree/node-pololumaestro).
 
-The Meccano skeleton (it's legs have since been lengthened), show my shoddy glue gun work.  You can see the Maestro board next to it.
+## Photos
+
+The Meccano skeleton (it's legs have since been lengthened), show my shoddy glue gun work.  You can see the Maestro board next to it:
 
 ![Meccano skeleton](https://raw.github.com/achingbrain/build-cat/master/assets/skeleton.jpg)
 
-Somewhat freaky image with the head attached to the servo
+Somewhat freaky image with the head attached to the servo:
 
 ![Skeleton with face attached](https://raw.github.com/achingbrain/build-cat/master/assets/skeletonwithskin.jpg)
 
