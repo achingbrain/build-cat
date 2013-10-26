@@ -8,7 +8,7 @@ Ptolemy (named for much mourned national treasure [Sir Patric Moore](http://en.w
 
 ## Demo
 
-See [https://vimeo.com/77849849](https://vimeo.com/77849849)
+[![Link to Vimeo](https://raw.github.com/achingbrain/build-cat/master/assets/video.jpg)](https://vimeo.com/77849849)
 
 ## Construction
 
