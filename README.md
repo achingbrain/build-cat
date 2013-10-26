@@ -1,6 +1,6 @@
 # Ptolemy
 
-A [johnny-five](https://github.com/rwaldron/johnny-five) based build notification system.  It's built from a toy cat picked up from Toys R Us, has a head mounted on a servo and has had something horrible done to it's eyes with a dremel.
+A [johnny-five](https://github.com/rwaldron/johnny-five) based build notification system.  It's built from a [toy cat picked up from Toys R Us](http://www.toysrus.co.uk/Toys-R-Us/Toys/Soft-Toys/Fur-Real-White-Walking-Kitty\(0079055\)), has a head mounted on a servo and has had something horrible done to it's eyes with a dremel.
 
 It watches a Jenkins URL for failing builds and then strikes fear into the heart of developers until they fix the build and restore Ptolemy to a happy state.
 
