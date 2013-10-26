@@ -6,15 +6,20 @@ var five = require("johnny-five"),
 	BuildCat = require("./lib/cat.js"),
 	BuildWatcher = require("./lib/watcher.js");;
 
+// the url we'll watch for failing builds
 var jenkins = "https://builds.apache.org/api/json";
+
+// how often to poll the url
 var checkInterval = 10000;
 
-process.on('uncaughtException', function(err) {
+// make error messages slightly more useful
+process.on("uncaughtException", function(err) {
 	console.error(err.stack);
 
 	process.exit(1);
 });
 
+// re-introduce old sweep behaviour..
 five.Servo.prototype.moveBetween = function( opts ) {
 	this.move(opts.range[0]);
 
@@ -58,31 +63,24 @@ PololuMaestro.find(PololuMaestro.SERIAL_MODES.USB_DUAL_PORT, function(maestro) {
 	], function(bridge) {
 		LOG.info("ptolemy", "Creating board");
 
-		var board = new five.Board({firmata: bridge});
+		// the serial ports are already connected so we don't have to wait for a "ready" event
+		new five.Board({firmata: bridge});
 
 		var head = new five.Servo(1);
-		var g = new five.Led(8);
-		var rR = new five.Led(2);
-		var rB = new five.Led(4);
-		var lR = new five.Led(5);
-		var lB = new five.Led(7);
+		var green = new five.Led(8);
+		var rightR = new five.Led(2);
+		var rightB = new five.Led(4);
+		var leftR = new five.Led(5);
+		var leftB = new five.Led(7);
 
-		board.repl.inject({
-			head: head,
-			g: g,
-			rR: rR,
-			rB: rB,
-			lR: lR,
-			lB: lB
-		});
+		// set up the cat and the watcher
+		var ptolemy = new BuildCat(head, green, rightR, rightB, leftR, leftB);
+		var watcher = new BuildWatcher(jenkins, checkInterval);
 
-		var ptolemy = new BuildCat(head, g, rR, rB, lR, lB);
-		ptolemy.demo();
-
-		/*var watcher = new BuildWatcher(jenkins, checkInterval);
+		// set up listeners
 		watcher.on("failed", ptolemy.sad.bind(ptolemy));
 		watcher.on("passed", ptolemy.happy.bind(ptolemy));
 		watcher.on("building", ptolemy.building.bind(ptolemy));
-		watcher.on("unstable", ptolemy.unstable.bind(ptolemy));*/
+		watcher.on("unstable", ptolemy.unstable.bind(ptolemy));
 	});
 });
