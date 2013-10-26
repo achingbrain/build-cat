@@ -18,7 +18,7 @@ The software runs on [Node.js](http://nodejs.org/), interfaces with [johnny-five
 
 ## Photos
 
-The Meccano skeleton (it's legs have since been lengthened), show my shoddy glue gun work.  You can see the Maestro board next to it:
+The Meccano skeleton showing my shoddy glue gun work.  The servo is glued into the remains of the original plastic skeleton which has holes drilled into it to mount Meccano bits on.  The legs have since been lengthened and you can also see the Maestro board sitting next to it.
 
 ![Meccano skeleton](https://raw.github.com/achingbrain/build-cat/master/assets/skeleton.jpg)
 
