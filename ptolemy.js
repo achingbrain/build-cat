@@ -4,7 +4,7 @@ var five = require("johnny-five"),
 	LOG = require("winston"),
 	IOBoard = require("ioboard"),
 	BuildCat = require("./lib/cat.js"),
-	BuildWatcher = require("./lib/watcher.js");;
+	BuildWatcher = require("./lib/watcher.js");
 
 // the url we'll watch for failing builds
 var jenkins = "https://builds.apache.org/api/json";
