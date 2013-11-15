@@ -14,7 +14,7 @@
 	"dependencies": {
 		"serialport": "~1.2.3",
 		"winston": "~0.7",
-		"request": "~2.27",
+		"restify": "~2.6",
 		"pololu-maestro-ioboard": "~0.0.0",
 		"pololu-maestro": "~2.1",
 		"ioboard": "~1.0",

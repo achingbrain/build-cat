@@ -7,7 +7,8 @@ var five = require("johnny-five"),
 	BuildWatcher = require("./lib/watcher.js");
 
 // the url we'll watch for failing builds
-var jenkins = "https://builds.apache.org/api/json";
+var jenkins = "https://builds.apache.org";
+var jobs = "/api/json";
 
 // how often to poll the url
 var checkInterval = 10000;
@@ -75,7 +76,7 @@ PololuMaestro.find(PololuMaestro.SERIAL_MODES.USB_DUAL_PORT, function(maestro) {
 
 		// set up the cat and the watcher
 		var ptolemy = new BuildCat(head, green, rightR, rightB, leftR, leftB);
-		var watcher = new BuildWatcher(jenkins, checkInterval);
+		var watcher = new BuildWatcher(jenkins, jobs, checkInterval);
 
 		// set up listeners
 		watcher.on("failed", ptolemy.sad.bind(ptolemy));
