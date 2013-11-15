@@ -1,0 +1,11 @@
+{
+	"jenkins": {
+		"url": "https://builds.apache.org",
+		"jobs": "/api/json"
+	},
+	"board": {
+		"commandPort": "/dev/ttyACM0",
+		"ttlPort": "/dev/ttyACM1"
+	},
+	"checkInterval": 5000
+}

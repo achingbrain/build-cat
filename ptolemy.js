@@ -4,14 +4,11 @@ var five = require("johnny-five"),
 	LOG = require("winston"),
 	IOBoard = require("ioboard"),
 	BuildCat = require("./lib/cat.js"),
-	BuildWatcher = require("./lib/watcher.js");
+	BuildWatcher = require("./lib/watcher.js"),
+	config = require("nconf");
 
-// the url we'll watch for failing builds
-var jenkins = "https://builds.apache.org";
-var jobs = "/api/json";
-
-// how often to poll the url
-var checkInterval = 10000;
+// set up arguments
+config.argv().env().file("config.json");
 
 // make error messages slightly more useful
 process.on("uncaughtException", function(err) {
@@ -43,7 +40,8 @@ five.Servo.prototype.moveBetween = function( opts ) {
 	return this;
 };
 
-PololuMaestro.find(PololuMaestro.SERIAL_MODES.USB_DUAL_PORT, function(maestro) {
+var maestro = new PololuMaestro(config.get("board:commandPort"), config.get("board:ttlPort"));
+maestro.on("ready", function() {
 	LOG.info("ptolemy", "Maestro ready");
 
 	maestro.setSpeed(1, 30);
@@ -76,7 +74,7 @@ PololuMaestro.find(PololuMaestro.SERIAL_MODES.USB_DUAL_PORT, function(maestro) {
 
 		// set up the cat and the watcher
 		var ptolemy = new BuildCat(head, green, rightR, rightB, leftR, leftB);
-		var watcher = new BuildWatcher(jenkins, jobs, checkInterval);
+		var watcher = new BuildWatcher(config.get("jenkins:url"), config.get("jenkins:jobs"), config.get("checkInterval"));
 
 		// set up listeners
 		watcher.on("failed", ptolemy.sad.bind(ptolemy));
