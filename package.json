@@ -17,7 +17,8 @@
 		"pololu-maestro-ioboard": "~0.0.0",
 		"pololu-maestro": "~2.1",
 		"ioboard": "~1.0",
-		"johnny-five": "~0.7"
+		"johnny-five": "~0.7",
+		"nconf": "~0.6"
 	},
 	"devDependencies": {
 		"nodeunit": "~0.8",
