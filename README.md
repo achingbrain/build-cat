@@ -4,9 +4,9 @@ A [johnny-five](https://github.com/rwaldron/johnny-five) based build notificatio
 
 It watches a Jenkins URL for failing builds and then strikes fear into the heart of developers until they fix the build and restore Ptolemy to a happy state.
 
-Ptolemy is named after a cat that belonged to much mourned national treasure [Sir Patric Moore](http://en.wikipedia.org/wiki/Patrick_Moore).
+Ptolemy is named after a cat that belonged to much mourned national treasure [Sir Patrick Moore](http://en.wikipedia.org/wiki/Patrick_Moore).
 
-![Ptolemy, relaxing with Sir Patric Moore](https://raw.github.com/achingbrain/build-cat/master/assets/ptolemy.jpg)
+![Ptolemy, relaxing with Sir Patrick Moore](https://raw.github.com/achingbrain/build-cat/master/assets/ptolemy.jpg)
 
 ## Demo
 
